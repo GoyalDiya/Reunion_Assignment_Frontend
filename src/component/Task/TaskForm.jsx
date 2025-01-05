@@ -26,7 +26,7 @@ export const TaskForm = ({ closeModal }) => {
     e.preventDefault();
 
     if(task) {
-        const response1 = await fetch(`http://localhost:8000/api/tasks/${task._id}`, {
+        const response1 = await fetch(`https://reunion-assignment-backend.onrender.com/api/tasks/${task._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json', 
@@ -43,7 +43,7 @@ export const TaskForm = ({ closeModal }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/api/tasks', {
+      const response = await fetch('https://reunion-assignment-backend.onrender.com/api/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ export const TaskProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/tasks`);
+      const response = await fetch(`https://reunion-assignment-backend.onrender.com/api/tasks`);
       const data = await response.json();
       let filteredTasks = data;
 

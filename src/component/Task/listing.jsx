@@ -8,11 +8,11 @@ export const Listing = () => {
 
   useEffect(() => {
     fetchData(); 
-  }, [priority, searchKey]);
+  }, [priority, searchKey, fetchData]);
 
   const deleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/tasks/${taskId}`, {
+      const response = await fetch(`https://reunion-assignment-backend.onrender.com/api/tasks/${taskId}`, {
         method: 'DELETE',
       });
   
